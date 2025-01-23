@@ -34,6 +34,12 @@ public class MenuController {
         return menuService.getMenusByType(type);
     }
 
+    @GetMapping("/menu/{name}")
+    public List<Menu> getMenusByName(@PathVariable String name) {
+        return menuService.getMenusByName(name);
+    }
+
+
     // Create new menu
     @PostMapping
     public Menu createMenu(@RequestBody Menu menu) {

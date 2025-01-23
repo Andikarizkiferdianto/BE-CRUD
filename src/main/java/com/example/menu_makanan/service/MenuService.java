@@ -24,6 +24,9 @@ public class MenuService {
     public List<Menu> getMenusByType(String type) {
         return menuRepository.findByType(type);
     }
+    public List<Menu> getMenusByName(String name) {
+        return menuRepository.findByName(name);
+    }
 
     public Menu createMenu(Menu menu) {
         return menuRepository.save(menu);
